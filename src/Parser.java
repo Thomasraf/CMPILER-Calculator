@@ -20,7 +20,10 @@ public class Parser {
             int pos = -1, ch;
 
             void lookForward() {
-                ch = (++pos < str.length()) ? str.charAt(pos) : -1;
+                if(++pos < str.length())
+                    ch = str.charAt(pos);
+                else
+                    ch = -1;
             }
 
             boolean pointer(int charTopointer) {
